@@ -12,6 +12,8 @@ class MorrisCodeConverter:
         }
         morris_text = ""
         for letter in list(text):
-            morris_text = morris_text + morse_code_dict[letter.upper()]
+            if letter == " ":
+                morris_text = morris_text + "     "
+            else:
+                morris_text = morris_text + morse_code_dict[letter.upper()]
         return morris_text
-    
